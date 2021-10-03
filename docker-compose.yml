@@ -12,5 +12,7 @@ services:
       context: ./shopping-cart
     ports:
       - 8082:8080
+    environment:
+      - PRODUCT_SERVICE=http://product-service:8080
     depends_on:
       - product-service
